@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>صفحتي الشخصية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>مرحبًا بكم في صفحتي الشخصية</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">نبذة عني</a></li>
+                <li><a href="#projects">مشاريعي</a></li>
+                <li><a href="#contact">تواصل معي</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2>نبذة عني</h2>
+        <img src="MyDesk.bmp" alt="صورة شخصية" class="C:\Users\T i T O\Desktop\صور" width="200" height="200">
+        <p>أنا مطور ويب أحب البرمجة والتصميم. أعمل على بناء مواقع وتطبيقات ويب مبتكرة تهدف إلى تحسين تجربة المستخدم.</p>
+    </section>
+
+    <section id="projects">
+        <h2>مشاريعي</h2>
+        <ul>
+            <li><i class="fas fa-shopping-cart"></i> مشروع 1: موقع للتجارة الإلكترونية</li>
+            <li><i class="fas fa-blog"></i> مشروع 2: مدونة شخصية</li>
+            <li><i class="fas fa-code"></i> مشروع 3: تطبيق ويب تفاعلي</li>
+        </ul>
+    </section>
+
+    <section id="contact">
+        <h2>تواصل معي</h2>
+        <form id="contactForm">
+            <label for="name">الاسم:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">البريد الإلكتروني:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">الرسالة:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">إرسال</button>
+        </form>
+        <div id="messageSent" class="hidden">شكرًا، تم إرسال رسالتك بنجاح!</div>
+    </section>
+
+    <footer>
+        <p>حقوق الطبع والنشر © 2024 جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // منع الإرسال الفوري للنموذج
+            document.getElementById('messageSent').classList.remove('hidden');
+        });
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdB4rExNtm-n5z13YeF0U3WVM1o6TwkwM76LL_XyHZA1XddaQ/viewform?embedded=true" width="640" height="1005" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </script>
+</body>
+</html>
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #4CAF50;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #4CAF50; /* لون أخضر */
+    border-bottom: 2px solid #4CAF50; /* خط تحت العنوان */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FFD700; /* لون ذهبي عند التمرير */
+}
+
+section {
+    padding: 20px;
+    margin: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.profile-image {
+    border-radius: 50%; /* لجعل الصورة دائرية */
+    width: 600px;
+    height: 80px;
+    display: block;
+    margin: 10px auto;
+}
+
+ul {
+    padding-Center: 20px;
+}
+
+ul li {
+    margin: 10px 0; /* مسافة بين العناصر */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #4CAF50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+button {
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: #45a049; /* لون أخضر داكن عند التمرير */
+}
+
+.hidden {
+    display: none; /* لإخفاء الرسالة */
+}
+
+#messageSent {
+    margin-top: 20px;
+    color: green; /* لون الرسالة */
+    font-weight: bold;
+}
